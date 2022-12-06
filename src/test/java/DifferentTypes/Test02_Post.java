@@ -32,7 +32,7 @@ public class Test02_Post {
 	
 	@Test
 	void james_forloop() {
-		//HIie
+		//HIie this is edit from github
 		
 		ArrayList<Integer> arrayList1 = new ArrayList<Integer>(Arrays.asList(1, 2, 4)); 
 		ArrayList<Integer> arrayList2 = new ArrayList<Integer>(Arrays.asList(1, 3, 4)); 
