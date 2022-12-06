@@ -33,7 +33,7 @@ public class Test02_Post {
 	@Test
 	void james_forloop() {
 		//HIie this is edit from github feature1
-		//-a
+		//-c making update to conflict from local 
 		
 		ArrayList<Integer> arrayList1 = new ArrayList<Integer>(Arrays.asList(1, 2, 4)); 
 		ArrayList<Integer> arrayList2 = new ArrayList<Integer>(Arrays.asList(1, 3, 4)); 
