@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-08T20:00:50 PST" name="Default suite" finished-at="2022-12-08T20:00:56 PST" duration-ms="6082">
+  <suite started-at="2022-12-20T20:26:27 PST" name="Default suite" finished-at="2022-12-20T20:26:32 PST" duration-ms="5081">
     <groups>
     </groups>
-    <test started-at="2022-12-08T20:00:50 PST" name="Default test" finished-at="2022-12-08T20:00:56 PST" duration-ms="6082">
-      <class name="Udemy.Basics">
-        <test-method signature="test123()[pri:0, instance:Udemy.Basics@7ed7259e]" started-at="2022-12-08T20:00:50 PST" name="test123" finished-at="2022-12-08T20:00:56 PST" duration-ms="5997" status="PASS">
+    <test started-at="2022-12-20T20:26:27 PST" name="Default test" finished-at="2022-12-20T20:26:32 PST" duration-ms="5081">
+      <class name="Udemy.DynamicJson">
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:Udemy.DynamicJson@243c4f91]" started-at="2022-12-20T20:26:27 PST" name="addBook" data-provider="BooksData" finished-at="2022-12-20T20:26:31 PST" duration-ms="3746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eric1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1232]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test123 -->
-      </class> <!-- Udemy.Basics -->
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:Udemy.DynamicJson@243c4f91]" started-at="2022-12-20T20:26:31 PST" name="addBook" data-provider="BooksData" finished-at="2022-12-20T20:26:32 PST" duration-ms="638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eric2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1231]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:Udemy.DynamicJson@243c4f91]" started-at="2022-12-20T20:26:32 PST" name="addBook" data-provider="BooksData" finished-at="2022-12-20T20:26:32 PST" duration-ms="608" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eric3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- Udemy.DynamicJson -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

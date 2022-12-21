@@ -2,6 +2,7 @@ package Udemy;
 
 import static io.restassured.RestAssured.*;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import files.payload;
@@ -38,13 +39,30 @@ public class Basics {
 		System.out.println(placeId);
 		
 		//Update Place
+		String newAddress = "12345 Gilbert";
 		
 		given().log().all().queryParam("key" , "qaclick123").body("{\r\n" + 
-				"    \"place_id\":\"e740c003f8ca139463f9c211630082dd\",\r\n" + 
-				"    \"address\": \"10612 gilbert\",\r\n" + 
+				"    \"place_id\":\""+placeId+"\",\r\n" + 
+				"    \"address\": \""+newAddress+"\",\r\n" + 
 				"    \"key\":\"qaclick123\"\r\n" + 
 				"}")
 		.when().put("/maps/api/place/update/json")
-		.then().assertThat().statusCode(200).body("msg",  equalTo("Address successfully updated"));
+		.then().log().all().assertThat().statusCode(200).body("msg",  equalTo("Address successfully updated"));
+		
+		//Get Place 
+		
+		String getPlaceResponse = given().log().all().queryParam("key", "qaclick123")
+		.queryParam("place_id", placeId)
+		.when().get("/maps/api/place/get/json")
+		.then().log().all().assertThat().statusCode(200).extract().response().asString();
+		
+		JsonPath js1 = new JsonPath(getPlaceResponse);
+		String actualAddress = js1.getString("address");
+		System.out.println(actualAddress);
+		Assert.assertEquals(actualAddress, newAddress);
 	}
+	
+	
+	
+		
 }
